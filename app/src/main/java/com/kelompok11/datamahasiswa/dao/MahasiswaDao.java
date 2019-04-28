@@ -30,7 +30,7 @@ public class MahasiswaDao {
                 SkemaDatabaseMahasiswa.TableMahasiswa.ColumnName_Nama
         };
         String urutan = SkemaDatabaseMahasiswa.TableMahasiswa.ColumnName_NIM+" DESC";
-        Cursor c = db.rawQuery("SELECT * FROM Mahasiswa ORDER BY Nim",null);
+        Cursor c = db.query(SkemaDatabaseMahasiswa.TableMahasiswa.TableName,daftarKolom,null,null,null,null,urutan);
         if(c.moveToFirst()){
             do{
                 Mahasiswa m = new Mahasiswa();
