@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fabTambah"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        app:backgroundTint="#D50000"
+        android:src="@drawable/ic_baseline_add_circle_36px"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tarik untuk refresh"
+        android:textAlignment="center"
+        android:id="@+id/tvRefresh"
+        android:textStyle="italic"
+        android:layout_marginBottom="5dp"
+        android:textColor="#1976D2"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtJudul"
+        android:text="Daftar Mahasiswa"
+        android:layout_below="@id/tvRefresh"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:layout_marginBottom="10dp"
+        />
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/swRefresh"
+        android:layout_below="@id/txtJudul">
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lv_daftarmahasiswa"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</RelativeLayout>
